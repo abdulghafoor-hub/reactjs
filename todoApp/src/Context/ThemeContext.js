@@ -1,8 +1,9 @@
 import { createContext, useContext } from "react";
  
 export const ThemeContext=createContext({
-    theme: "light",
-    setTheme: () =>{}
+    themeMode: "light",
+    lightTheme: () =>{},
+    darkTheme: () =>{}
 });
 export const ThemeProvider= ThemeContext.Provider;
 
