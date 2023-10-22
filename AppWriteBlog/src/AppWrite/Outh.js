@@ -20,6 +20,7 @@ export class AuthService{
                return  userAccount;
             }
         } catch (error) {
+            console.log("AppWrite Eroor:: Create Account Error", error);
             throw error;
         }
     }
@@ -28,6 +29,7 @@ export class AuthService{
         try {
             return await this.account.createEmailSession(email, password);
         } catch (error) {
+            console.log("erroe:: Login error", error);
             throw error;
         }
     }
@@ -52,5 +54,4 @@ export class AuthService{
     }
 }
 const authService=new AuthService();
-export default authService 
- 
+export default authService;
